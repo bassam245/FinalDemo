@@ -19,7 +19,7 @@ namespace FinalDemo.Repos.Implemention
         {
             if(Sortby=="Name")
             return await appDbContextt1.products.Where(s => s.Id == Id).OrderBy(s=>s.Name).Skip((page - 1) * pagesize).Take(pagesize).ToListAsync();
-            else  if (Sortby == "Price")
+            else  if (Sortby == "Priceث")
                 return await appDbContextt1.products.Where(s => s.Id == Id ).OrderBy(s => s.price).Skip((page - 1) * pagesize).Take(pagesize).ToListAsync();
          
             return await appDbContextt1.products.Where(s => s.Id == Id).OrderBy(s => s.Id).Skip((page - 1) * pagesize).Take(page).ToListAsync();
